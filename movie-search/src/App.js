@@ -16,7 +16,7 @@ class App extends Component {
 
   _renderResults() {
     return this.state.movieResults.length === 0
-    ? <h6 className="is-size-6" className='form__text'> 😞 Sorry, try something different...</h6>
+    ? <h6 className="is-size-6 form__text"> <span role="img" aria-label="sad face">😞</span>  Sorry, try something different...</h6>
     : <MoviesList movieResults={this.state.movieResults} />
   }
 
@@ -33,13 +33,16 @@ class App extends Component {
               {
                 this.state.userSearch
                 ? this._renderResults()
-                : <h4 className='is-size-6' className='form__text'> You can search Movies, Series or Videogames </h4>
+                : <h4 className='is-size-6 form__text'> You can search Movies, Series or Videogames </h4>
               }
             </div>
             <hr/>
             <div className="container container__lg">
-              <p>I use <a href='http://www.omdbapi.com/' target='_blank'>OMDB API</a> for results</p>
-              <p><i>Follow me on <a href='https://twitter.com/lucasromerodb' target='_blank'>Twitter</a> or check my <a href='https://github.com/lucasromerodb' target='_blank'>Github</a></i></p>
+              <p>I use <a href='http://www.omdbapi.com/' target='_blank' rel="noopener noreferrer">OMDB API</a> for results</p>
+              <p><i>
+                Follow me on <a href='https://twitter.com/lucasromerodb' target='_blank' rel="noopener noreferrer">Twitter</a>
+                or check my <a href='https://github.com/lucasromerodb' target='_blank' rel="noopener noreferrer">Github</a>
+              </i></p>
             </div>
           </div>
         </section>
