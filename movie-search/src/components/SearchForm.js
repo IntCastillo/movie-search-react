@@ -35,7 +35,7 @@ export class SearchForm extends Component {
               className="input"
               onChange={this._handleUserSearch}
               type="text"
-              placeholder="Try something like 'Star Wars'"
+              placeholder="Try something like 'Dragon Ball'"
             />
           </p>
           <p className="control">
