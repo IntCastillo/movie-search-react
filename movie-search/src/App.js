@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Title } from './components/Title'
 import { SearchForm } from './components/SearchForm'
+import { MoviesList } from './components/MoviesList'
 
 import 'bulma/css/bulma.css';
 import './App.css';
@@ -13,34 +14,26 @@ class App extends Component {
     this.setState({ movieResults: results })
   }
 
-  _renderResults = () => {
-    const { movieResults } = this.state
-    return movieResults.map(movie => {
-      return <p>{movie.Title}</p>
-    })
-  }
-
   render() {
     return (
-      <div>
+      <div className='App'>
         <section className="hero is-bold">
           <div className="hero-body">
             <div className="container container__lg">
               <Title>Movie Searcher</Title>
               <SearchForm onResults={this._handleResults}/>
+            </div>
+            <div className="container">
               {
                 this.state.movieResults.length < 1
-                ? <h4 className='is-size-6' style={{marginTop: 10, marginBottom: 10}}>Without results.</h4>
-                : this._renderResults()
+                ? <h4 className='is-size-6' style={{marginTop: 10, marginBottom: 10, width: '100%', textAlign: 'center'}}>
+                  You can search Movies, Series or Videogames
+                </h4>
+                : <MoviesList movieResults={this.state.movieResults} />
               }
             </div>
           </div>
         </section>
-        <div className='container container__lg has-text-centered'>
-          <a href="https://bulma.io" className='middle-align'>
-            <img src="https://bulma.io/images/made-with-bulma.png" alt="Made with Bulma" width="128" height="24"/>
-          </a>
-        </div>
       </div>
     )
   }

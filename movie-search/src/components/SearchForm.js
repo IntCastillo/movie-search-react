@@ -36,11 +36,11 @@ export class SearchForm extends Component {
               className="input"
               onChange={this._handleUserSearch}
               type="text"
-              placeholder="Movies to search..."
+              placeholder="Try something like 'Star Wars'"
             />
           </p>
           <p className="control">
-            <button className="button is-primary" >
+            <button className="button is-info" >
               Search
             </button>
           </p>
