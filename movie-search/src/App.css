@@ -33,3 +33,10 @@ body, html {
 .grid__item {
   width: 25%;
 }
+
+.form__text {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: 100%;
+  text-align: center;
+}

@@ -8,10 +8,16 @@ import './App.css';
 
 class App extends Component {
 
-  state = { movieResults: [] }
+  state = { movieResults: [], userSearch: false}
 
   _handleResults = results => {
-    this.setState({ movieResults: results })
+    this.setState({ movieResults: results, userSearch: true })
+  }
+
+  _renderResults() {
+    return this.state.movieResults.length === 0
+    ? <h6 className="is-size-6" className='form__text'> 😞 Sorry, try something different...</h6>
+    : <MoviesList movieResults={this.state.movieResults} />
   }
 
   render() {
@@ -25,11 +31,9 @@ class App extends Component {
             </div>
             <div className="container">
               {
-                this.state.movieResults.length < 1
-                ? <h4 className='is-size-6' style={{marginTop: 10, marginBottom: 10, width: '100%', textAlign: 'center'}}>
-                  You can search Movies, Series or Videogames
-                </h4>
-                : <MoviesList movieResults={this.state.movieResults} />
+                this.state.userSearch
+                ? this._renderResults()
+                : <h4 className='is-size-6' className='form__text'> You can search Movies, Series or Videogames </h4>
               }
             </div>
           </div>
