@@ -41,6 +41,10 @@ body, html {
   text-align: center;
 }
 
+hr {
+  opacity: 0
+}
+
 @media screen and (max-width: 768px) {
   .grid__item {
     width: calc(100% / 3);
