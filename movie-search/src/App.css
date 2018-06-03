@@ -1,6 +1,15 @@
 body, html {
-  background-color: #222;
+  background-color: #f3f3f3;
 }
 .container__lg {
-  max-width: 500px
+  max-width: 400px
+}
+
+.middle-align {
+  display: flex;
+  align-items: center
+}
+
+.middle-align img {
+  margin-right: 5px
 }
