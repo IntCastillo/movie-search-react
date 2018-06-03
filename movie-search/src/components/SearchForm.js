@@ -19,7 +19,6 @@ export class SearchForm extends Component {
     fetch(`http://www.omdbapi.com/?apikey=${ API_KEY }&s=${ searchText }`)
       .then(response => response.json())
       .then(data => {
-        console.clear()
         console.log(data)
         const { Search = [], totalResults = '0' } = data
         console.log({ Search, totalResults })
