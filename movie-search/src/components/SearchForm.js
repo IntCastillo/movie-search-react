@@ -1,5 +1,8 @@
 import React, { Component } from 'react'
 
+// OMDB API: http://www.omdbapi.com/?i=tt3896198&apikey=e4a7f8e9
+const API_KEY = 'e4a7f8e9'
+
 export class SearchForm extends Component {
 
   state = {
@@ -10,26 +13,38 @@ export class SearchForm extends Component {
     this.setState({ searchText: e.target.value })
   }
 
+  _handleSubmit = (e) => {
+    e.preventDefault()
+    const { searchText } = this.state
+    fetch(`http://www.omdbapi.com/?apikey=${ API_KEY }&s=${ searchText }`)
+      .then(response => response.json())
+      .then(data => {
+        console.clear()
+        console.log(data)
+        const { Search, totalResults } = data
+        console.log({ Search, totalResults })
+        this.props.onResults(Search)
+      })
+  }
+
   render() {
-    console.log(this.state.searchText);
     return (
-      <form className="field is-grouped">
-        <p className="control is-expanded">
-          <input
-            className="input"
-            onChange={this._handleUserSearch}
-            type="text"
-            placeholder="Movies to search..."
-          />
-        </p>
-        <p className="control">
-          <button
-            className="button is-warning"
-            type='submit'
-            >
-            Search
-          </button>
-        </p>
+      <form onSubmit={this._handleSubmit}>
+        <div className="field is-grouped">
+          <p className="control is-expanded">
+            <input
+              className="input"
+              onChange={this._handleUserSearch}
+              type="text"
+              placeholder="Movies to search..."
+            />
+          </p>
+          <p className="control">
+            <button className="button is-primary" >
+              Search
+            </button>
+          </p>
+        </div>
       </form>
     )
   }
