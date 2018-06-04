@@ -15,7 +15,7 @@ export class SearchForm extends Component {
   _handleSubmit = e => {
     e.preventDefault();
     const { searchText } = this.state;
-    fetch(`http://www.omdbapi.com/?apikey=${API_KEY}&s=${searchText}`)
+    fetch(`https://www.omdbapi.com/?apikey=${API_KEY}&s=${searchText}`)
       .then(response => response.json())
       .then(data => {
         console.log(data);
