@@ -38,7 +38,7 @@ class App extends Component {
             </div>
             <hr/>
             <div className="container container__lg">
-              <p>I use <a href="http://www.omdbapi.com/" target="_blank" rel="noopener noreferrer">OMDB API</a> for results</p>
+              <p>I use <a href="https://www.omdbapi.com/" target="_blank" rel="noopener noreferrer">OMDB API</a> for results</p>
               <p><i>
                 Follow me on <a href="https://twitter.com/lucasromerodb" target="_blank" rel="noopener noreferrer">Twitter</a>
                 or check my <a href="https://github.com/lucasromerodb" target="_blank" rel="noopener noreferrer">Github</a>

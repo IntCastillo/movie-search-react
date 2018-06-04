@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 
-// OMDB API: http://www.omdbapi.com/?i=tt3896198&apikey=e4a7f8e9
 const API_KEY = "e4a7f8e9";
 
 export class SearchForm extends Component {
