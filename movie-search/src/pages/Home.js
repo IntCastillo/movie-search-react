@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Title } from "../components/Title"
+// import { Title } from "../components/Title"
 import { SearchForm } from "../components/SearchForm"
 import { MoviesList } from "../components/MoviesList"
 
@@ -25,7 +25,7 @@ export class Home extends Component {
       <section className="Home">
         <div className="Home__container">
           <div className="Home__form">
-            <Title>Entertainment Searcher</Title>
+            {/* <Title>Entertainment Searcher</Title> */}
             <SearchForm onResults={this._handleResults}/>
           </div>
           <div className="Home__description">

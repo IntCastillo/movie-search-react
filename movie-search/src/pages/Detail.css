@@ -45,7 +45,7 @@
   left: 0;
   opacity: .8;
   filter: blur(20px);
-  transform: scale(-0.8) translateY(10px);
+  transform: scale(0.8) translateY(-20px);
 }
 
 .Detail__star {

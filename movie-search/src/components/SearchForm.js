@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 
+import './SearchForm.css'
+
 const API_KEY = "e4a7f8e9"
 
 export class SearchForm extends Component {
@@ -27,18 +29,14 @@ export class SearchForm extends Component {
   render() {
     return (
       <form onSubmit={this._handleSubmit}>
-        <div className="field is-grouped">
-          <p className="control is-expanded">
-            <input
-              className="input"
-              onChange={this._handleUserSearch}
-              type="text"
-              placeholder="Hey, try 'Dragon Ball'"
-            />
-          </p>
-          <p className="control">
-            <button className="button is-info">Search</button>
-          </p>
+        <div className="SearchForm__inputContainer">
+          <input
+            className="SearchForm__input has-text-danger"
+            onChange={this._handleUserSearch}
+            type="text"
+            placeholder="Hey, try 'Dragon Ball'"
+          />
+          <button className="SearchForm__submit has-text-danger"><i className="fas fa-search"></i></button>
         </div>
       </form>
     );

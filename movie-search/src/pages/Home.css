@@ -5,25 +5,23 @@
 }
 
 .Home__container {
-  padding-right: 10px;
-  padding-left: 10px;
+  padding-right: 15px;
+  padding-left: 15px;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  /* overflow-x: hidden; */
 }
 
 .Home__form {
   width: 100%;
   max-width: 400px;
-  margin-top: 50px;
+  margin-top: 15px;
 }
 
 .Home__description {
-  margin-top: 30px;
-  margin-bottom: 30px;
+  margin-top: 20px;
   width: 1280px;
   display: flex;
   justify-content: center;
@@ -94,6 +92,12 @@
 .Home__credits {
   margin-top: 30px;
   margin-bottom: 30px;
+  opacity: 0.3;
+  transition: opacity 0.4s ease;
+}
+
+.Home__credits:hover {
+  opacity: 1
 }
 
 @media screen and (max-width: 768px) {
@@ -120,6 +124,7 @@
   .Home__movieImg_blured {
     transform: scale(0.9) translateY(15px);
   }
+
 }
 
 @media screen and (max-width: 320px) {
