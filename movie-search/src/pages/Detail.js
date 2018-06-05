@@ -44,7 +44,7 @@ export class Detail extends Component {
             <img src={Poster} alt={Title} className="Detail__poster Detail__poster_blured"/>
             <img src={Poster} alt={Title} className="Detail__poster"/>
           </div>
-          <div className="Detail__column">
+          <div className="Detail__column Detail__description">
             <h2 className="Detail__title title">{Title}</h2>
             <div className="tags">
               <p className="tag is-rounded">{Released}</p>
