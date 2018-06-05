@@ -18,6 +18,7 @@
   },
   "homepage": "https://lucasromerodb.github.io/movie-search-react",
   "devDependencies": {
-    "gh-pages": "^1.2.0"
+    "gh-pages": "^1.2.0",
+    "react-router-dom": "^4.2.2"
   }
 }
