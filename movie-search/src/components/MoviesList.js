@@ -11,17 +11,20 @@ export class MoviesList extends Component {
     const { movieResults } = this.props;
     return (
       <div className="grid">
-        {movieResults.map(movie => {
-          return (
-            <Movie
-              key={movie.imbdID}
-              poster={movie.Poster}
-              title={movie.Title}
-              year={movie.Year}
-              type={movie.Type}
-            />
-          );
-        })}
+        {
+          movieResults.map(movie => {
+            return (
+              <Movie
+                key={`${movie.imdbID}${movie.Title}`}
+                id={movie.imdbID}
+                poster={movie.Poster}
+                title={movie.Title}
+                year={movie.Year}
+                type={movie.Type}
+              />
+            )
+          })
+        }
       </div>
     );
   }
