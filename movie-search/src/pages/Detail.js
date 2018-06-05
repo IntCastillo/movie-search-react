@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
+import { BackToHome } from '../components/BackToHome'
 
 const API_KEY = "e4a7f8e9"
 
@@ -37,6 +38,7 @@ export class Detail extends Component {
 
     return (
       <div>
+        <BackToHome/>
         <h2>{Title}</h2>
         <p>{Released}</p>
         <p>{Country}</p>
