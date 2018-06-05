@@ -40,7 +40,7 @@ export class Home extends Component {
             <p><i>
               Follow me on <a href="https://twitter.com/lucasromerodb" target="_blank" rel="noopener noreferrer">Twitter</a> or check my <a href="https://github.com/lucasromerodb" target="_blank" rel="noopener noreferrer">Github</a>
             </i></p>
-            <small><a href="https://www.udemy.com/aprendiendo-react/" target="_blank" rel="noopener noreferrer">Do you want to learn React? (Spanish)</a></small>
+            <small><a href="https://www.udemy.com/aprendiendo-react/?couponCode=5_ANNIVERSARIO" target="_blank" rel="noopener noreferrer">Do you want to learn React? (Spanish)</a></small>
           </div>
         </div>
       </section>
