@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { BackToHome } from '../components/BackToHome'
+import './Detail.css'
 
 const API_KEY = "e4a7f8e9"
 
@@ -34,19 +35,35 @@ export class Detail extends Component {
 
   render() {
 
-    const { Title, Actors, Country, Genere, Released, Type, imdbRating, Poster } = this.state.movie
+    const { Title, Actors, Country, Released, Type, imdbRating, Poster } = this.state.movie
 
     return (
-      <div>
-        <BackToHome/>
-        <h2>{Title}</h2>
-        <p>{Released}</p>
-        <p>{Country}</p>
-        <p>{Genere}</p>
-        <p>{Type}</p>
-        <p>{imdbRating}</p>
-        <img src={Poster} alt={Title}/>
-        <p>{Actors}</p>
+      <div className="Detail">
+        <div className="Detail__card">
+          <div className="Detail__column Detail__column_img">
+            <img src={Poster} alt={Title} className="Detail__poster Detail__poster_blured"/>
+            <img src={Poster} alt={Title} className="Detail__poster"/>
+          </div>
+          <div className="Detail__column">
+            <h2 className="Detail__title title">{Title}</h2>
+            <div className="tags">
+              <p className="tag is-rounded">{Released}</p>
+              <p className="tag is-rounded">{Country}</p>
+              <p className="tag is-rounded">{Type}</p>
+            </div>
+            <p>
+              <strong>IMDB Rating:</strong> <span className="tag is-warning"><i className="fas fa-star Detail__star"></i> {imdbRating}</span>
+            </p>
+            <p>
+              <strong>Actors:</strong>
+              <br/>
+              {Actors}
+            </p>
+            <div className="Detail__footer">
+              <BackToHome/>
+            </div>
+          </div>
+        </div>
       </div>
     )
   }

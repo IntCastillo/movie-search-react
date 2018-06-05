@@ -1,11 +1,15 @@
 body, html {
-  background-color: #f3f3f3;
+  /* background-color: #f3f3f3; */
 }
 
 .App {
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
+
+/*
 .container__lg {
   max-width: 400px
 }
@@ -54,4 +58,4 @@ hr {
   .grid__item {
     width: 100%;
   }
-}
+} */

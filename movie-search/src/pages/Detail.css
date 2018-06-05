@@ -1,0 +1,52 @@
+.Detail {
+  display: flex;
+  justify-content: center;
+}
+
+.Detail__column .tag {
+  margin-right: 5px;
+}
+
+.Detail p {
+  margin-bottom: 10px;
+}
+
+.Detail__card {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-top: 50px;
+}
+
+.Detail__column {
+  position: relative;
+  width: 50%;
+  max-width: 500px;
+  box-sizing: border-box;
+  padding-right: 30px;
+  padding-left: 30px;
+}
+
+.Detail__poster {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  border-radius: 15px;
+}
+
+.Detail__poster_blured {
+  opacity: .8;
+  filter: blur(20px);
+  transform: scale(0.9) translateY(40px);
+  /* transition: transform ease 0.6s */
+}
+
+.Detail__star {
+  margin-right: 5px
+}
+
+.Detail__footer {
+  margin-top: 30px;
+}

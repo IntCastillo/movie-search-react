@@ -7,6 +7,6 @@ export const BackToHome = () => (
     to={`${process.env.PUBLIC_URL}/`}
     role="button"
   >
-    Back to home
+    <i className="fas fa-chevron-left" style={{marginRight: 6}}></i> Back to Search
   </Link>
 )

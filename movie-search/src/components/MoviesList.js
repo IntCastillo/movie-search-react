@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { Movie } from "./Movie";
 
+import '../pages/Home.css'
+
 export class MoviesList extends Component {
   static propTypes = {
     movies: PropTypes.array
@@ -10,7 +12,7 @@ export class MoviesList extends Component {
   render() {
     const { movieResults } = this.props;
     return (
-      <div className="grid">
+      <div className="Home__results">
         {
           movieResults.map(movie => {
             return (
