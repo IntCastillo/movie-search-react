@@ -34,7 +34,7 @@ export class SearchForm extends Component {
             className="SearchForm__input has-text-danger"
             onChange={this._handleUserSearch}
             type="text"
-            placeholder="Hey, try 'Dragon Ball'"
+            placeholder="Hey, try 'Pokemon'"
           />
           <button className="SearchForm__submit has-text-danger"><i className="fas fa-search"></i></button>
         </div>
