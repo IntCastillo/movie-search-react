@@ -22,7 +22,8 @@ export class SearchForm extends Component {
         console.log(data);
         const { Search = [], totalResults = "0" } = data;
         console.log({ Search, totalResults });
-        this.props.onResults(Search);
+        this.props.onResults(Search)
+        window.sessionStorage.setItem('sessionMovies', JSON.stringify(Search));
       });
   };
 

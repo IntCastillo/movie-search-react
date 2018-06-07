@@ -15,9 +15,21 @@ export class Home extends Component {
   }
 
   _renderResults() {
+    console.log('movieResults', this.state.movieResults);
     return this.state.movieResults.length === 0
     ? <h6><span role="img" aria-label="sad face"> 😞 </span>  Sorry, try something different...</h6>
     : <MoviesList movieResults={this.state.movieResults} />
+  }
+
+  componentWillMount() {
+    if ( window.sessionStorage.getItem('sessionMovies') !== null ) {
+      const movieResults = JSON.parse(window.sessionStorage.getItem('sessionMovies'))
+      this.setState({ movieResults, userSearch: true })
+      this._renderResults()
+    } else {
+      window.sessionStorage.setItem('sessionMovies', [])
+    }
+
   }
 
   render() {
