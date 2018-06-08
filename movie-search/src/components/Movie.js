@@ -24,16 +24,6 @@ export class Movie extends Component {
           <h3 className="Home__movieContent-title">{title}</h3>
           <p className="Home__movieContent-year">{year} ({type})</p>
         </div>
-        {/* <div className="card card__results">
-          <div className="card-image">
-            <figure className="image">
-            </figure>
-          </div>
-          <div className="card-content">
-            <div className="media">
-            </div>
-          </div>
-        </div> */}
       </Link>
     )
   }
